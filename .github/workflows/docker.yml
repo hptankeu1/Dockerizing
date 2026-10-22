@@ -26,7 +26,7 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.htankeu }}
+          username: htankeu
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Set up Docker Buildx
@@ -38,5 +38,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.htankeu }}/qr-code-generator-app:latest
-            ${{ secrets.htankeu }}/qr-code-generator-app:${{ github.sha }}
+            htankeu/qr-code-generator-app:latest
+            htankeu/qr-code-generator-app:${{ github.sha }}
