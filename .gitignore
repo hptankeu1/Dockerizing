@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+*.pyc
+logs/
+qr_codes/
+.env
